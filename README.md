@@ -98,10 +98,15 @@ https://stockagesami.blob.core.windows.net/conteneur-1/uploadAzureStorage.png
 
 ### 7 . Azure AD
 Azure AD est conçu pour offrir des services d'identité et d'accès dans le cloud, permettant aux entreprises de gérer et de sécuriser l'accès à leurs applications et ressources.
+
 Les etapes pour creer un Azure AD : 
+
 -Création d'un groupe dans Azure AD,
+
 -Attribution de rôles à ce groupe,
+
 -Ajout d'utilisateurs au groupe,
+
 -Attribution des rôles spécifiques aux ressources
 
 Le but est de choisir le rôle approprié en fonction des actions que vous souhaitez autoriser pour chaque utilisateurs.
@@ -112,25 +117,37 @@ Le but est de choisir le rôle approprié en fonction des actions que vous souha
 
 ## Etape 1 - Creation Azure Database for MySQL flexible server
  Se referer au 3. Service db pour plus de detail.
+
  Apres avoir crée notre DB, nous pouvons y accéder depuis notre script python
+
 ![DB](images/connectDB.png)
+
+
  ici host = "samix-mysql-server.mysql.database.azure.com"
 ## Etape 2 - Flask 
+
  Dans notyre partie Flask nous pouvons faire des methodes CRUD comme un add par exemple :
+
  ![ADD](images/add_method.png)
+
 ## Etape 3 - Docker 
+
  Ensuite créer notre conteneur :
  ![Docker](images/docker.png)
 ## Etape 4 - Docker Hub + Web App Azure
   On peut ensuite pousser son image sur le docker hub car nous en auront besoin pour le deploiement de notre webApp.
   Dans notre cas l'image est :"samix94/azureflask"
+
   ![Deploy](images/webApp.png)
+
   Apres le déploiement notre application est en ligne avec l'url : https://flaskazuresami.azurewebsites.net/
+
   ![En ligne](images/APP.png) 
 
   ## Annexe
 
 Avant de faire ce projet Flask/Mysql, mon objectif était de deployer une app django sur Azure.
+
 Cette application de scrapp n'a pas pu fonctionner pour le moment en deploiement avecv Azure.
 
 lien : https://scraplandd.azurewebsites.net/ 
