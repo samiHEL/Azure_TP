@@ -1,7 +1,7 @@
 # Projet Azure TP 
 
 Conception et mise en œuvre d'une solution personnalisée à l'aide des services Azure
-Dans notre cas nous utilisons les credit student 100$
+Dans notre cas nous utilisons les credits student 100$
 ![Credit/Azure](images/credit_student.png)
 
 ## Projets de présentation du cloud
@@ -48,23 +48,28 @@ az vm open-port --resource-group MyResourceGroup --name samixx --port 80 --prior
 
 
 
-### 3. Service db
+### 3. SQL Database
 
-Notre objectif est de creer une WebApp deployé sur Azure et qui posséde different services.
-Notre db devra être géré de maniere indépendant sur Azure.
+Notre objectif est de creer une WebApp deployé sur Azure et qui posséde differents services.
+Notre db devra être géré de maniere indépendante sur Azure.
 Ici l'interface graphique est plus adequat.
 commençons par chercher dans azure "Azure Database for MySQL flexible server"
+
 ![Credit/Azure](images/azureDatab.png)
-Puis nous associons l'ip de notre machine en local pour faire nos premier test
+
+Puis nous associons l'ip de notre machine en local pour faire nos premier test.
 ![Parametre/IP](ipPub.png)
+
 Un court scrypt en python va nous permettre de faire la connexion avec notre db distante (voir db.py)
 ![result/db_test](images/result_db_1.png)
 
 
 ### 4 . Deploy webApp
-![Alt text](images/webapp.png)
-![Alt text](images/webappDeploy.png)
+
+Voir partie projet 
+
 ### 5. Auto Scalling 
+
 ![Auto Scalling](images/scalling.png)
 Le paramètre "Maximum scale" dans le contexte d'Auto-Scaling pour les applications web Azure représente le nombre maximum d'instances que votre application web peut avoir à un moment donné en réponse à une augmentation de la charge.
 Lorsque l'échelle automatique est activée, votre application web peut augmenter ou diminuer automatiquement le nombre d'instances en fonction de la charge du trafic
@@ -72,6 +77,7 @@ Par exemple si je configure à 3 mon maximum scale cela signifie que le nombre t
 
 
 ### 6. Set Up Blob Storage
+
 Le blob Storage dans Azure permet de stocker de manière sécurisée et accessible des fichiers.
 Pour notre exemple nous allons sotcker une image que nous mettrons ensuite dans ce Readme.
 L'avantage est que nous obtenons un lien https apres avoir déposé notre image dans l'espace Blob storage.
@@ -85,6 +91,7 @@ Ici la liste des photos déjà stockées
 ![Alt text](images/stockImage.png)
 
 Apres avoir upload notre image nous obtenons un lien : 
+
 l'image que vous voyez ci dessous est en fait stockée sur azure en Blob Storage 
 
 https://stockagesami.blob.core.windows.net/conteneur-1/uploadAzureStorage.png
@@ -120,3 +127,11 @@ Le but est de choisir le rôle approprié en fonction des actions que vous souha
   ![Deploy](images/webApp.png)
   Apres le déploiement notre application est en ligne avec l'url : https://flaskazuresami.azurewebsites.net/
   ![En ligne](images/APP.png) 
+
+  ## Annexe
+
+Avant de faire ce projet Flask/Mysql, mon objectif était de deployer une app django sur Azure.
+Cette application de scrapp n'a pas pu fonctionner pour le moment en deploiement avecv Azure.
+
+lien : https://scraplandd.azurewebsites.net/ 
+![ScrappLand ](images/webappDeploy.png)
